@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="pk.edu.pl.productdesktopapp.view.product.ProductController"
+      prefHeight="400.0" prefWidth="600.0" spacing="5">
+    <Label text="Nazwa produktu:"/>
+    <ComboBox fx:id="productNamesField" promptText="Wybierz produkt" maxWidth="200"/>
+    <TextField fx:id="productNameField" maxWidth="200" visible="false"/>
+
+    <Label text="Ilość: "/>
+    <TextField fx:id="amountField" maxWidth="200"/>
+
+    <Label text="Cena: "/>
+    <TextField fx:id="priceField" maxWidth="200"/>
+
+    <Label text="Dostępny: "/>
+    <Label fx:id="enabled" maxWidth="200"/>
+
+    <Button fx:id="addButton" text="Dodaj produkt" onMouseClicked="#onAddButton" mnemonicParsing="false"
+            prefWidth="120"/>
+    <Button fx:id="editButton" text="Tryb edycji" onMouseClicked="#onEditButton" mnemonicParsing="false"
+            prefWidth="120"/>
+    <Button fx:id="updateButton" text="Aktualizuj produkt" onMouseClicked="#onUpdateButton" mnemonicParsing="false"
+            visible="false" prefWidth="120"/>
+    <Button fx:id="deleteButton" text="Usuń produkt" onMouseClicked="#onDeleteButton" mnemonicParsing="false"
+            visible="false" prefWidth="120"/>
+    <Button fx:id="cancelButton" text="Anuluj edycję" onMouseClicked="#onCancelButton" mnemonicParsing="false"
+            visible="false" prefWidth="120"/>
+    <Button text="Pokaż historię produktu" onMouseClicked="#onHistoryButton" mnemonicParsing="false" prefWidth="120"/>
+
+    <padding>
+        <Insets top="2" right="20" bottom="20" left="20"/>
+    </padding>
+</VBox>
